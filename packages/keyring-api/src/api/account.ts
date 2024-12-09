@@ -26,13 +26,21 @@ export enum SolAccountType {
 }
 
 /**
+ * Supported Bermuda account types.
+ */
+export enum BermudaAccountType {
+  V0 = 'bermuda:v0',
+}
+
+/**
  * Supported account types.
  */
 export type KeyringAccountType =
   | `${EthAccountType.Eoa}`
   | `${EthAccountType.Erc4337}`
   | `${BtcAccountType.P2wpkh}`
-  | `${SolAccountType.DataAccount}`;
+  | `${SolAccountType.DataAccount}`
+  | `${BermudaAccountType.V0}`;
 
 /**
  * A struct which represents a Keyring account object. It is abstract enough to
@@ -55,6 +63,7 @@ export const KeyringAccountStruct = object({
     `${EthAccountType.Erc4337}`,
     `${BtcAccountType.P2wpkh}`,
     `${SolAccountType.DataAccount}`,
+    `${BermudaAccountType.V0}`,
   ]),
 
   /**
