@@ -11,9 +11,11 @@ import {
   BtcAccountType,
   EthAccountType,
   SolAccountType,
+  BermudaAccountType,
   BtcMethod,
   EthMethod,
   SolMethod,
+  BermudaMethod,
   KeyringEvent,
 } from '@metamask/keyring-api';
 import type { SnapController } from '@metamask/snaps-controllers';
@@ -39,6 +41,10 @@ const ETH_EOA_METHODS = [
   EthMethod.SignTypedDataV1,
   EthMethod.SignTypedDataV3,
   EthMethod.SignTypedDataV4,
+];
+
+const BERMUDA_METHODS = [
+  BermudaMethod.CreateBermudaAccount,
 ];
 
 describe('SnapKeyring', () => {
@@ -116,6 +122,13 @@ describe('SnapKeyring', () => {
     methods: [...Object.values(SolMethod)],
     type: SolAccountType.DataAccount,
   };
+  const bermudaAccount = {
+    id: '419ee179-5ab5-449d-9c25-34e12c1ada66',
+    address: '0x2cba2cab498804297f5ce817361c13d2d595ae380147f3e24cc2d6b4af3434ef3003d87c69df76de0f8b915dde902621a4e6d27e3923ea316fe2917a91974d39',
+    options: {},
+    methods: [...Object.values(BermudaMethod)],
+    type: BermudaAccountType.V0,
+  };
 
   const accounts = [
     ethEoaAccount1,
@@ -124,6 +137,7 @@ describe('SnapKeyring', () => {
     ethErc4337Account,
     btcP2wpkhAccount,
     solDataAccount,
+    bermudaAccount,
   ] as const;
 
   const executionContext: KeyringExecutionContext = {
@@ -473,6 +487,7 @@ describe('SnapKeyring', () => {
           ethErc4337Account.address.toLowerCase(),
           btcP2wpkhAccount.address,
           solDataAccount.address,
+          bermudaAccount.address,
         ]);
       });
 
@@ -488,6 +503,7 @@ describe('SnapKeyring', () => {
           ethErc4337Account.address.toLowerCase(),
           btcP2wpkhAccount.address,
           solDataAccount.address,
+          bermudaAccount.address,
         ]);
       });
 
@@ -664,6 +680,7 @@ describe('SnapKeyring', () => {
         ethErc4337Account.address.toLowerCase(),
         btcP2wpkhAccount.address,
         solDataAccount.address,
+        bermudaAccount.address,
       ]);
     });
   });
@@ -678,6 +695,7 @@ describe('SnapKeyring', () => {
           [ethErc4337Account.id]: { account: ethErc4337Account, snapId },
           [btcP2wpkhAccount.id]: { account: btcP2wpkhAccount, snapId },
           [solDataAccount.id]: { account: solDataAccount, snapId },
+          [bermudaAccount.id]: { account: bermudaAccount, snapId },
         },
       };
       const state = await keyring.serialize();
@@ -1353,6 +1371,7 @@ describe('SnapKeyring', () => {
         accounts[3].address,
         accounts[4].address,
         accounts[5].address,
+        accounts[6].address,
       ]);
     });
 
@@ -1366,6 +1385,7 @@ describe('SnapKeyring', () => {
         accounts[3].address,
         accounts[4].address,
         accounts[5].address,
+        accounts[6].address,
       ]);
       expect(console.error).toHaveBeenCalledWith(
         "Account '0xc728514df8a7f9271f4b7a4dd2aa6d2d723d3ee3' may not have been removed from snap 'local:snap.mock':",

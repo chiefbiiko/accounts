@@ -1917,13 +1917,13 @@ __metadata:
 
 "@metamask/keyring-api@file:../keyring-api::locator=%40metamask%2Fkeyring-snap-sdk%40workspace%3Apackages%2Fkeyring-snap-sdk":
   version: 11.1.0
-  resolution: "@metamask/keyring-api@file:../keyring-api#../keyring-api::hash=8e377e&locator=%40metamask%2Fkeyring-snap-sdk%40workspace%3Apackages%2Fkeyring-snap-sdk"
+  resolution: "@metamask/keyring-api@file:../keyring-api#../keyring-api::hash=737da7&locator=%40metamask%2Fkeyring-snap-sdk%40workspace%3Apackages%2Fkeyring-snap-sdk"
   dependencies:
     "@metamask/keyring-utils": ../keyring-utils
     "@metamask/superstruct": "npm:^3.1.0"
     "@metamask/utils": "npm:^9.3.0"
     bech32: "npm:^2.0.0"
-  checksum: 10/8c1a8d817577cc0fb883de2c366a9290a419b6033b4b1da7396e138023eea3fe58e2cae1a551adfeafed3506bf556af655da1ca5d1f97d27e8ab8a3c2fbc08b8
+  checksum: 10/ed2026ba180473875dea1ba1dcb64463b207a0f4954b45cb48e8d70aa8c666948288028e3a35ed089f6fb5d0a2738b2fce7095f88b9bb06084b14d50df730391
   languageName: node
   linkType: hard
 
@@ -2080,9 +2080,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D8e377e%26locator%3D%2540metamask%252Fkeyring-snap-sdk%2540workspace%253Apackages%252Fkeyring-snap-sdk":
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D737da7%26locator%3D%2540metamask%252Fkeyring-snap-sdk%2540workspace%253Apackages%252Fkeyring-snap-sdk":
   version: 0.0.1
-  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=736c46&locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D8e377e%26locator%3D%2540metamask%252Fkeyring-snap-sdk%2540workspace%253Apackages%252Fkeyring-snap-sdk"
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=736c46&locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D737da7%26locator%3D%2540metamask%252Fkeyring-snap-sdk%2540workspace%253Apackages%252Fkeyring-snap-sdk"
   dependencies:
     "@metamask/superstruct": "npm:^3.1.0"
     "@metamask/utils": "npm:^9.3.0"
