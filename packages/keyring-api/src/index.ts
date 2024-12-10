@@ -1,4 +1,5 @@
 export * from './api';
+export * from './bermuda';
 export * from './btc';
 export * from './sol';
 export * from './eth';
