@@ -8,10 +8,12 @@ import {
   EthAccountType,
   KeyringAccountStruct,
   SolAccountType,
+  BermudaAccountType,
   BtcP2wpkhAccountStruct,
   EthEoaAccountStruct,
   EthErc4337AccountStruct,
   SolDataAccountStruct,
+  BermudaAccountStruct
 } from '@metamask/keyring-api';
 import { exactOptional, object } from '@metamask/keyring-utils';
 import type { Infer, Struct } from '@metamask/superstruct';
@@ -20,7 +22,8 @@ import { boolean, string, number } from '@metamask/superstruct';
 export type InternalAccountType =
   | EthAccountType
   | BtcAccountType
-  | SolAccountType;
+  | SolAccountType
+  | BermudaAccountType;
 
 export const InternalAccountMetadataStruct = object({
   metadata: object({
@@ -61,6 +64,11 @@ export const InternalSolDataAccountStruct = object({
   ...InternalAccountMetadataStruct.schema,
 });
 
+export const InternalBermudaAccountStruct = object({
+  ...BermudaAccountStruct.schema,
+  ...InternalAccountMetadataStruct.schema,
+});
+
 export type InternalEthEoaAccount = Infer<typeof InternalEthEoaAccountStruct>;
 
 export type InternalEthErc4337Account = Infer<
@@ -73,24 +81,29 @@ export type InternalBtcP2wpkhAccount = Infer<
 
 export type InternalSolDataAccount = Infer<typeof InternalSolDataAccountStruct>;
 
+export type InternalBermudaAccount = Infer<typeof InternalBermudaAccountStruct>;
+
 export const InternalAccountStructs: Record<
   string,
   | Struct<InternalEthEoaAccount>
   | Struct<InternalEthErc4337Account>
   | Struct<InternalBtcP2wpkhAccount>
   | Struct<InternalSolDataAccount>
+  | Struct<InternalBermudaAccount>
 > = {
   [`${EthAccountType.Eoa}`]: InternalEthEoaAccountStruct,
   [`${EthAccountType.Erc4337}`]: InternalEthErc4337AccountStruct,
   [`${BtcAccountType.P2wpkh}`]: InternalBtcP2wpkhAccountStruct,
   [`${SolAccountType.DataAccount}`]: InternalSolDataAccountStruct,
+  [`${BermudaAccountType.V0}`]: InternalBermudaAccountStruct,
 };
 
 export type InternalAccountTypes =
   | InternalEthEoaAccount
   | InternalEthErc4337Account
   | InternalBtcP2wpkhAccount
-  | InternalSolDataAccount;
+  | InternalSolDataAccount
+  | InternalBermudaAccount;
 
 export const InternalAccountStruct = object({
   ...KeyringAccountStruct.schema,
