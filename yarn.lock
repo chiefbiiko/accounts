@@ -1801,9 +1801,9 @@ __metadata:
     "@lavamoat/preinstall-always-fail": "npm:^2.1.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
     "@metamask/eth-sig-util": "npm:^8.0.0"
-    "@metamask/keyring-api": "workspace:^"
-    "@metamask/keyring-internal-api": "workspace:^"
-    "@metamask/keyring-snap-internal-client": "workspace:^"
+    "@metamask/keyring-api": ../keyring-api
+    "@metamask/keyring-internal-api": ../keyring-internal-api
+    "@metamask/keyring-snap-internal-client": ../keyring-snap-internal-client
     "@metamask/providers": "npm:^18.1.0"
     "@metamask/snaps-controllers": "npm:^9.10.0"
     "@metamask/snaps-sdk": "npm:^6.7.0"
@@ -1826,7 +1826,7 @@ __metadata:
     uuid: "npm:^9.0.1"
     webextension-polyfill: "npm:^0.12.0"
   peerDependencies:
-    "@metamask/keyring-api": "workspace:^"
+    "@metamask/keyring-api": "*"
     "@metamask/providers": ^18.1.0
   languageName: unknown
   linkType: soft
@@ -1915,19 +1915,115 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@metamask/keyring-api@file:../keyring-api::locator=%40metamask%2Fkeyring-snap-sdk%40workspace%3Apackages%2Fkeyring-snap-sdk":
+"@metamask/keyring-api@file:../keyring-api::locator=%40metamask%2Feth-snap-keyring%40workspace%3Apackages%2Fkeyring-snap-bridge":
   version: 11.1.0
-  resolution: "@metamask/keyring-api@file:../keyring-api#../keyring-api::hash=737da7&locator=%40metamask%2Fkeyring-snap-sdk%40workspace%3Apackages%2Fkeyring-snap-sdk"
+  resolution: "@metamask/keyring-api@file:../keyring-api#../keyring-api::hash=3b30ef&locator=%40metamask%2Feth-snap-keyring%40workspace%3Apackages%2Fkeyring-snap-bridge"
   dependencies:
     "@metamask/keyring-utils": ../keyring-utils
     "@metamask/superstruct": "npm:^3.1.0"
     "@metamask/utils": "npm:^9.3.0"
     bech32: "npm:^2.0.0"
-  checksum: 10/ed2026ba180473875dea1ba1dcb64463b207a0f4954b45cb48e8d70aa8c666948288028e3a35ed089f6fb5d0a2738b2fce7095f88b9bb06084b14d50df730391
+  checksum: 10/2ffc620051754d44903d694c4e3276dbf1cb168a20083446c0585cfa5530e7c26a7ac9ef45da1ac62a96c250cce0e97536f3061b41873efce7d11ec9095f2112
   languageName: node
   linkType: hard
 
-"@metamask/keyring-api@workspace:^, @metamask/keyring-api@workspace:packages/keyring-api":
+"@metamask/keyring-api@file:../keyring-api::locator=%40metamask%2Fkeyring-internal-api%40file%3A..%2Fkeyring-internal-api%23..%2Fkeyring-internal-api%3A%3Ahash%3De39018%26locator%3D%2540metamask%252Feth-snap-keyring%2540workspace%253Apackages%252Fkeyring-snap-bridge":
+  version: 11.1.0
+  resolution: "@metamask/keyring-api@file:../keyring-api#../keyring-api::hash=3b30ef&locator=%40metamask%2Fkeyring-internal-api%40file%3A..%2Fkeyring-internal-api%23..%2Fkeyring-internal-api%3A%3Ahash%3De39018%26locator%3D%2540metamask%252Feth-snap-keyring%2540workspace%253Apackages%252Fkeyring-snap-bridge"
+  dependencies:
+    "@metamask/keyring-utils": ../keyring-utils
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+    bech32: "npm:^2.0.0"
+  checksum: 10/2ffc620051754d44903d694c4e3276dbf1cb168a20083446c0585cfa5530e7c26a7ac9ef45da1ac62a96c250cce0e97536f3061b41873efce7d11ec9095f2112
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-api@file:../keyring-api::locator=%40metamask%2Fkeyring-internal-api%40workspace%3Apackages%2Fkeyring-internal-api":
+  version: 11.1.0
+  resolution: "@metamask/keyring-api@file:../keyring-api#../keyring-api::hash=3b30ef&locator=%40metamask%2Fkeyring-internal-api%40workspace%3Apackages%2Fkeyring-internal-api"
+  dependencies:
+    "@metamask/keyring-utils": ../keyring-utils
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+    bech32: "npm:^2.0.0"
+  checksum: 10/2ffc620051754d44903d694c4e3276dbf1cb168a20083446c0585cfa5530e7c26a7ac9ef45da1ac62a96c250cce0e97536f3061b41873efce7d11ec9095f2112
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-api@file:../keyring-api::locator=%40metamask%2Fkeyring-snap-client%40file%3A..%2Fkeyring-snap-client%23..%2Fkeyring-snap-client%3A%3Ahash%3D050422%26locator%3D%2540metamask%252Fkeyring-snap-internal-client%2540file%253A..%252Fkeyring-snap-internal-client%2523..%252Fkeyring-snap-internal-client%253A%253Ahash%253D9114da%2526locator%253D%252540metamask%25252Feth-snap-keyring%252540workspace%25253Apackages%25252Fkeyring-snap-bridge":
+  version: 11.1.0
+  resolution: "@metamask/keyring-api@file:../keyring-api#../keyring-api::hash=3b30ef&locator=%40metamask%2Fkeyring-snap-client%40file%3A..%2Fkeyring-snap-client%23..%2Fkeyring-snap-client%3A%3Ahash%3D050422%26locator%3D%2540metamask%252Fkeyring-snap-internal-client%2540file%253A..%252Fkeyring-snap-internal-client%2523..%252Fkeyring-snap-internal-client%253A%253Ahash%253D9114da%2526locator%253D%252540metamask%25252Feth-snap-keyring%252540workspace%25253Apackages%25252Fkeyring-snap-bridge"
+  dependencies:
+    "@metamask/keyring-utils": ../keyring-utils
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+    bech32: "npm:^2.0.0"
+  checksum: 10/2ffc620051754d44903d694c4e3276dbf1cb168a20083446c0585cfa5530e7c26a7ac9ef45da1ac62a96c250cce0e97536f3061b41873efce7d11ec9095f2112
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-api@file:../keyring-api::locator=%40metamask%2Fkeyring-snap-client%40file%3A..%2Fkeyring-snap-client%23..%2Fkeyring-snap-client%3A%3Ahash%3D050422%26locator%3D%2540metamask%252Fkeyring-snap-internal-client%2540workspace%253Apackages%252Fkeyring-snap-internal-client":
+  version: 11.1.0
+  resolution: "@metamask/keyring-api@file:../keyring-api#../keyring-api::hash=3b30ef&locator=%40metamask%2Fkeyring-snap-client%40file%3A..%2Fkeyring-snap-client%23..%2Fkeyring-snap-client%3A%3Ahash%3D050422%26locator%3D%2540metamask%252Fkeyring-snap-internal-client%2540workspace%253Apackages%252Fkeyring-snap-internal-client"
+  dependencies:
+    "@metamask/keyring-utils": ../keyring-utils
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+    bech32: "npm:^2.0.0"
+  checksum: 10/2ffc620051754d44903d694c4e3276dbf1cb168a20083446c0585cfa5530e7c26a7ac9ef45da1ac62a96c250cce0e97536f3061b41873efce7d11ec9095f2112
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-api@file:../keyring-api::locator=%40metamask%2Fkeyring-snap-client%40workspace%3Apackages%2Fkeyring-snap-client":
+  version: 11.1.0
+  resolution: "@metamask/keyring-api@file:../keyring-api#../keyring-api::hash=3b30ef&locator=%40metamask%2Fkeyring-snap-client%40workspace%3Apackages%2Fkeyring-snap-client"
+  dependencies:
+    "@metamask/keyring-utils": ../keyring-utils
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+    bech32: "npm:^2.0.0"
+  checksum: 10/2ffc620051754d44903d694c4e3276dbf1cb168a20083446c0585cfa5530e7c26a7ac9ef45da1ac62a96c250cce0e97536f3061b41873efce7d11ec9095f2112
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-api@file:../keyring-api::locator=%40metamask%2Fkeyring-snap-internal-client%40file%3A..%2Fkeyring-snap-internal-client%23..%2Fkeyring-snap-internal-client%3A%3Ahash%3D9114da%26locator%3D%2540metamask%252Feth-snap-keyring%2540workspace%253Apackages%252Fkeyring-snap-bridge":
+  version: 11.1.0
+  resolution: "@metamask/keyring-api@file:../keyring-api#../keyring-api::hash=3b30ef&locator=%40metamask%2Fkeyring-snap-internal-client%40file%3A..%2Fkeyring-snap-internal-client%23..%2Fkeyring-snap-internal-client%3A%3Ahash%3D9114da%26locator%3D%2540metamask%252Feth-snap-keyring%2540workspace%253Apackages%252Fkeyring-snap-bridge"
+  dependencies:
+    "@metamask/keyring-utils": ../keyring-utils
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+    bech32: "npm:^2.0.0"
+  checksum: 10/2ffc620051754d44903d694c4e3276dbf1cb168a20083446c0585cfa5530e7c26a7ac9ef45da1ac62a96c250cce0e97536f3061b41873efce7d11ec9095f2112
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-api@file:../keyring-api::locator=%40metamask%2Fkeyring-snap-internal-client%40workspace%3Apackages%2Fkeyring-snap-internal-client":
+  version: 11.1.0
+  resolution: "@metamask/keyring-api@file:../keyring-api#../keyring-api::hash=3b30ef&locator=%40metamask%2Fkeyring-snap-internal-client%40workspace%3Apackages%2Fkeyring-snap-internal-client"
+  dependencies:
+    "@metamask/keyring-utils": ../keyring-utils
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+    bech32: "npm:^2.0.0"
+  checksum: 10/2ffc620051754d44903d694c4e3276dbf1cb168a20083446c0585cfa5530e7c26a7ac9ef45da1ac62a96c250cce0e97536f3061b41873efce7d11ec9095f2112
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-api@file:../keyring-api::locator=%40metamask%2Fkeyring-snap-sdk%40workspace%3Apackages%2Fkeyring-snap-sdk":
+  version: 11.1.0
+  resolution: "@metamask/keyring-api@file:../keyring-api#../keyring-api::hash=3b30ef&locator=%40metamask%2Fkeyring-snap-sdk%40workspace%3Apackages%2Fkeyring-snap-sdk"
+  dependencies:
+    "@metamask/keyring-utils": ../keyring-utils
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+    bech32: "npm:^2.0.0"
+  checksum: 10/2ffc620051754d44903d694c4e3276dbf1cb168a20083446c0585cfa5530e7c26a7ac9ef45da1ac62a96c250cce0e97536f3061b41873efce7d11ec9095f2112
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-api@workspace:packages/keyring-api":
   version: 0.0.0-use.local
   resolution: "@metamask/keyring-api@workspace:packages/keyring-api"
   dependencies:
@@ -1954,15 +2050,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@metamask/keyring-internal-api@workspace:^, @metamask/keyring-internal-api@workspace:packages/keyring-internal-api":
+"@metamask/keyring-internal-api@file:../keyring-internal-api::locator=%40metamask%2Feth-snap-keyring%40workspace%3Apackages%2Fkeyring-snap-bridge":
+  version: 0.0.1
+  resolution: "@metamask/keyring-internal-api@file:../keyring-internal-api#../keyring-internal-api::hash=e39018&locator=%40metamask%2Feth-snap-keyring%40workspace%3Apackages%2Fkeyring-snap-bridge"
+  dependencies:
+    "@metamask/keyring-api": ../keyring-api
+    "@metamask/keyring-utils": ../keyring-utils
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/414c4498194e6f03fb38afdd7b7c27326f7545ec8a634c47fb282438966b85910ebbc0142b8ce8fe74f2f4d218fbb6dfe7a480f9a0d77577211eea7ca626ee56
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-internal-api@workspace:packages/keyring-internal-api":
   version: 0.0.0-use.local
   resolution: "@metamask/keyring-internal-api@workspace:packages/keyring-internal-api"
   dependencies:
     "@lavamoat/allow-scripts": "npm:^3.2.1"
     "@lavamoat/preinstall-always-fail": "npm:^2.1.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/keyring-api": "workspace:^"
-    "@metamask/keyring-utils": "workspace:^"
+    "@metamask/keyring-api": ../keyring-api
+    "@metamask/keyring-utils": ../keyring-utils
     "@metamask/superstruct": "npm:^3.1.0"
     "@metamask/utils": "npm:^9.3.0"
     "@ts-bridge/cli": "npm:^0.6.0"
@@ -1981,15 +2089,47 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@metamask/keyring-snap-client@workspace:^, @metamask/keyring-snap-client@workspace:packages/keyring-snap-client":
+"@metamask/keyring-snap-client@file:../keyring-snap-client::locator=%40metamask%2Fkeyring-snap-internal-client%40file%3A..%2Fkeyring-snap-internal-client%23..%2Fkeyring-snap-internal-client%3A%3Ahash%3D9114da%26locator%3D%2540metamask%252Feth-snap-keyring%2540workspace%253Apackages%252Fkeyring-snap-bridge":
+  version: 0.0.1
+  resolution: "@metamask/keyring-snap-client@file:../keyring-snap-client#../keyring-snap-client::hash=050422&locator=%40metamask%2Fkeyring-snap-internal-client%40file%3A..%2Fkeyring-snap-internal-client%23..%2Fkeyring-snap-internal-client%3A%3Ahash%3D9114da%26locator%3D%2540metamask%252Feth-snap-keyring%2540workspace%253Apackages%252Fkeyring-snap-bridge"
+  dependencies:
+    "@metamask/keyring-api": ../keyring-api
+    "@metamask/keyring-utils": ../keyring-utils
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@types/uuid": "npm:^9.0.8"
+    uuid: "npm:^9.0.1"
+    webextension-polyfill: "npm:^0.12.0"
+  peerDependencies:
+    "@metamask/providers": ^18.1.0
+  checksum: 10/65e55e42ef5bd3ad6b11f769a1784398ee8aa9075056dbd43cc8d6f86608d2aba186ee7a571448bc86c01d4caf4548c1304d2e400cee886c9a263d1a07d66183
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-snap-client@file:../keyring-snap-client::locator=%40metamask%2Fkeyring-snap-internal-client%40workspace%3Apackages%2Fkeyring-snap-internal-client":
+  version: 0.0.1
+  resolution: "@metamask/keyring-snap-client@file:../keyring-snap-client#../keyring-snap-client::hash=050422&locator=%40metamask%2Fkeyring-snap-internal-client%40workspace%3Apackages%2Fkeyring-snap-internal-client"
+  dependencies:
+    "@metamask/keyring-api": ../keyring-api
+    "@metamask/keyring-utils": ../keyring-utils
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@types/uuid": "npm:^9.0.8"
+    uuid: "npm:^9.0.1"
+    webextension-polyfill: "npm:^0.12.0"
+  peerDependencies:
+    "@metamask/providers": ^18.1.0
+  checksum: 10/65e55e42ef5bd3ad6b11f769a1784398ee8aa9075056dbd43cc8d6f86608d2aba186ee7a571448bc86c01d4caf4548c1304d2e400cee886c9a263d1a07d66183
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-snap-client@workspace:packages/keyring-snap-client":
   version: 0.0.0-use.local
   resolution: "@metamask/keyring-snap-client@workspace:packages/keyring-snap-client"
   dependencies:
     "@lavamoat/allow-scripts": "npm:^3.2.1"
     "@lavamoat/preinstall-always-fail": "npm:^2.1.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/keyring-api": "workspace:^"
-    "@metamask/keyring-utils": "workspace:^"
+    "@metamask/keyring-api": ../keyring-api
+    "@metamask/keyring-utils": ../keyring-utils
     "@metamask/providers": "npm:^18.1.0"
     "@metamask/superstruct": "npm:^3.1.0"
     "@metamask/utils": "npm:^9.3.0"
@@ -2014,16 +2154,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@metamask/keyring-snap-internal-client@workspace:^, @metamask/keyring-snap-internal-client@workspace:packages/keyring-snap-internal-client":
+"@metamask/keyring-snap-internal-client@file:../keyring-snap-internal-client::locator=%40metamask%2Feth-snap-keyring%40workspace%3Apackages%2Fkeyring-snap-bridge":
+  version: 0.0.1
+  resolution: "@metamask/keyring-snap-internal-client@file:../keyring-snap-internal-client#../keyring-snap-internal-client::hash=9114da&locator=%40metamask%2Feth-snap-keyring%40workspace%3Apackages%2Fkeyring-snap-bridge"
+  dependencies:
+    "@metamask/keyring-api": ../keyring-api
+    "@metamask/keyring-snap-client": ../keyring-snap-client
+    "@metamask/keyring-utils": ../keyring-utils
+    "@metamask/snaps-controllers": "npm:^9.10.0"
+    "@metamask/snaps-sdk": "npm:^6.7.0"
+    "@metamask/snaps-utils": "npm:^8.3.0"
+    webextension-polyfill: "npm:^0.12.0"
+  peerDependencies:
+    "@metamask/providers": ^18.1.0
+  checksum: 10/240153d5ef52ca250accaebf0f121f3ad982a8382f1325276643144371d3457acf681f26db8ae629ace9010b7d3f2f2d8debbd7320bf2d86ee0c33f2837262b6
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-snap-internal-client@workspace:packages/keyring-snap-internal-client":
   version: 0.0.0-use.local
   resolution: "@metamask/keyring-snap-internal-client@workspace:packages/keyring-snap-internal-client"
   dependencies:
     "@lavamoat/allow-scripts": "npm:^3.2.1"
     "@lavamoat/preinstall-always-fail": "npm:^2.1.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/keyring-api": "workspace:^"
-    "@metamask/keyring-snap-client": "workspace:^"
-    "@metamask/keyring-utils": "workspace:^"
+    "@metamask/keyring-api": ../keyring-api
+    "@metamask/keyring-snap-client": ../keyring-snap-client
+    "@metamask/keyring-utils": ../keyring-utils
     "@metamask/providers": "npm:^18.1.0"
     "@metamask/snaps-controllers": "npm:^9.10.0"
     "@metamask/snaps-sdk": "npm:^6.7.0"
@@ -2080,37 +2237,187 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D737da7%26locator%3D%2540metamask%252Fkeyring-snap-sdk%2540workspace%253Apackages%252Fkeyring-snap-sdk":
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Feth-snap-keyring%2540workspace%253Apackages%252Fkeyring-snap-bridge":
   version: 0.0.1
-  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=736c46&locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D737da7%26locator%3D%2540metamask%252Fkeyring-snap-sdk%2540workspace%253Apackages%252Fkeyring-snap-sdk"
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Feth-snap-keyring%2540workspace%253Apackages%252Fkeyring-snap-bridge"
   dependencies:
     "@metamask/superstruct": "npm:^3.1.0"
     "@metamask/utils": "npm:^9.3.0"
-  checksum: 10/739877c05e00922bc61028fa64210111cdaf02e45758dd8189ddafe5559509d15de972380357a1c66b310e8112f49761d33891f0cc3eaf4717575efe52e7161b
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-internal-api%2540file%253A..%252Fkeyring-internal-api%2523..%252Fkeyring-internal-api%253A%253Ahash%253De39018%2526locator%253D%252540metamask%25252Feth-snap-keyring%252540workspace%25253Apackages%25252Fkeyring-snap-bridge":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-internal-api%2540file%253A..%252Fkeyring-internal-api%2523..%252Fkeyring-internal-api%253A%253Ahash%253De39018%2526locator%253D%252540metamask%25252Feth-snap-keyring%252540workspace%25253Apackages%25252Fkeyring-snap-bridge"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-internal-api%2540workspace%253Apackages%252Fkeyring-internal-api":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-internal-api%2540workspace%253Apackages%252Fkeyring-internal-api"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-snap-client%2540file%253A..%252Fkeyring-snap-client%2523..%252Fkeyring-snap-client%253A%253Ahash%253D050422%2526locator%253D%252540metamask%25252Fkeyring-snap-internal-client%252540file%25253A..%25252Fkeyring-snap-internal-client%252523..%25252Fkeyring-snap-internal-client%25253A%25253Ahash%25253D9114da%252526locator%25253D%25252540metamask%2525252Feth-snap-keyring%25252540workspace%2525253Apackages%2525252Fkeyring-snap-bridge":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-snap-client%2540file%253A..%252Fkeyring-snap-client%2523..%252Fkeyring-snap-client%253A%253Ahash%253D050422%2526locator%253D%252540metamask%25252Fkeyring-snap-internal-client%252540file%25253A..%25252Fkeyring-snap-internal-client%252523..%25252Fkeyring-snap-internal-client%25253A%25253Ahash%25253D9114da%252526locator%25253D%25252540metamask%2525252Feth-snap-keyring%25252540workspace%2525253Apackages%2525252Fkeyring-snap-bridge"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-snap-client%2540file%253A..%252Fkeyring-snap-client%2523..%252Fkeyring-snap-client%253A%253Ahash%253D050422%2526locator%253D%252540metamask%25252Fkeyring-snap-internal-client%252540workspace%25253Apackages%25252Fkeyring-snap-internal-client":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-snap-client%2540file%253A..%252Fkeyring-snap-client%2523..%252Fkeyring-snap-client%253A%253Ahash%253D050422%2526locator%253D%252540metamask%25252Fkeyring-snap-internal-client%252540workspace%25253Apackages%25252Fkeyring-snap-internal-client"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-snap-client%2540workspace%253Apackages%252Fkeyring-snap-client":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-snap-client%2540workspace%253Apackages%252Fkeyring-snap-client"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-snap-internal-client%2540file%253A..%252Fkeyring-snap-internal-client%2523..%252Fkeyring-snap-internal-client%253A%253Ahash%253D9114da%2526locator%253D%252540metamask%25252Feth-snap-keyring%252540workspace%25253Apackages%25252Fkeyring-snap-bridge":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-snap-internal-client%2540file%253A..%252Fkeyring-snap-internal-client%2523..%252Fkeyring-snap-internal-client%253A%253Ahash%253D9114da%2526locator%253D%252540metamask%25252Feth-snap-keyring%252540workspace%25253Apackages%25252Fkeyring-snap-bridge"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-snap-internal-client%2540workspace%253Apackages%252Fkeyring-snap-internal-client":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-snap-internal-client%2540workspace%253Apackages%252Fkeyring-snap-internal-client"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-snap-sdk%2540workspace%253Apackages%252Fkeyring-snap-sdk":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-api%40file%3A..%2Fkeyring-api%23..%2Fkeyring-api%3A%3Ahash%3D3b30ef%26locator%3D%2540metamask%252Fkeyring-snap-sdk%2540workspace%253Apackages%252Fkeyring-snap-sdk"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
   languageName: node
   linkType: hard
 
 "@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-api%40workspace%3Apackages%2Fkeyring-api":
   version: 0.0.1
-  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=736c46&locator=%40metamask%2Fkeyring-api%40workspace%3Apackages%2Fkeyring-api"
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-api%40workspace%3Apackages%2Fkeyring-api"
   dependencies:
     "@metamask/superstruct": "npm:^3.1.0"
     "@metamask/utils": "npm:^9.3.0"
-  checksum: 10/739877c05e00922bc61028fa64210111cdaf02e45758dd8189ddafe5559509d15de972380357a1c66b310e8112f49761d33891f0cc3eaf4717575efe52e7161b
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-internal-api%40file%3A..%2Fkeyring-internal-api%23..%2Fkeyring-internal-api%3A%3Ahash%3De39018%26locator%3D%2540metamask%252Feth-snap-keyring%2540workspace%253Apackages%252Fkeyring-snap-bridge":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-internal-api%40file%3A..%2Fkeyring-internal-api%23..%2Fkeyring-internal-api%3A%3Ahash%3De39018%26locator%3D%2540metamask%252Feth-snap-keyring%2540workspace%253Apackages%252Fkeyring-snap-bridge"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-internal-api%40workspace%3Apackages%2Fkeyring-internal-api":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-internal-api%40workspace%3Apackages%2Fkeyring-internal-api"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-snap-client%40file%3A..%2Fkeyring-snap-client%23..%2Fkeyring-snap-client%3A%3Ahash%3D050422%26locator%3D%2540metamask%252Fkeyring-snap-internal-client%2540file%253A..%252Fkeyring-snap-internal-client%2523..%252Fkeyring-snap-internal-client%253A%253Ahash%253D9114da%2526locator%253D%252540metamask%25252Feth-snap-keyring%252540workspace%25253Apackages%25252Fkeyring-snap-bridge":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-snap-client%40file%3A..%2Fkeyring-snap-client%23..%2Fkeyring-snap-client%3A%3Ahash%3D050422%26locator%3D%2540metamask%252Fkeyring-snap-internal-client%2540file%253A..%252Fkeyring-snap-internal-client%2523..%252Fkeyring-snap-internal-client%253A%253Ahash%253D9114da%2526locator%253D%252540metamask%25252Feth-snap-keyring%252540workspace%25253Apackages%25252Fkeyring-snap-bridge"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-snap-client%40file%3A..%2Fkeyring-snap-client%23..%2Fkeyring-snap-client%3A%3Ahash%3D050422%26locator%3D%2540metamask%252Fkeyring-snap-internal-client%2540workspace%253Apackages%252Fkeyring-snap-internal-client":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-snap-client%40file%3A..%2Fkeyring-snap-client%23..%2Fkeyring-snap-client%3A%3Ahash%3D050422%26locator%3D%2540metamask%252Fkeyring-snap-internal-client%2540workspace%253Apackages%252Fkeyring-snap-internal-client"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-snap-client%40workspace%3Apackages%2Fkeyring-snap-client":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-snap-client%40workspace%3Apackages%2Fkeyring-snap-client"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-snap-internal-client%40file%3A..%2Fkeyring-snap-internal-client%23..%2Fkeyring-snap-internal-client%3A%3Ahash%3D9114da%26locator%3D%2540metamask%252Feth-snap-keyring%2540workspace%253Apackages%252Fkeyring-snap-bridge":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-snap-internal-client%40file%3A..%2Fkeyring-snap-internal-client%23..%2Fkeyring-snap-internal-client%3A%3Ahash%3D9114da%26locator%3D%2540metamask%252Feth-snap-keyring%2540workspace%253Apackages%252Fkeyring-snap-bridge"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
+  languageName: node
+  linkType: hard
+
+"@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-snap-internal-client%40workspace%3Apackages%2Fkeyring-snap-internal-client":
+  version: 0.0.1
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-snap-internal-client%40workspace%3Apackages%2Fkeyring-snap-internal-client"
+  dependencies:
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^9.3.0"
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
   languageName: node
   linkType: hard
 
 "@metamask/keyring-utils@file:../keyring-utils::locator=%40metamask%2Fkeyring-snap-sdk%40workspace%3Apackages%2Fkeyring-snap-sdk":
   version: 0.0.1
-  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=736c46&locator=%40metamask%2Fkeyring-snap-sdk%40workspace%3Apackages%2Fkeyring-snap-sdk"
+  resolution: "@metamask/keyring-utils@file:../keyring-utils#../keyring-utils::hash=ac3f16&locator=%40metamask%2Fkeyring-snap-sdk%40workspace%3Apackages%2Fkeyring-snap-sdk"
   dependencies:
     "@metamask/superstruct": "npm:^3.1.0"
     "@metamask/utils": "npm:^9.3.0"
-  checksum: 10/739877c05e00922bc61028fa64210111cdaf02e45758dd8189ddafe5559509d15de972380357a1c66b310e8112f49761d33891f0cc3eaf4717575efe52e7161b
+  checksum: 10/74208482cce9d0d06f44fa2b32ef40c096886e28b728aa99f75b66b4357463a8423cbf75d0d880768b72ebac6eeddcd89d520f19f38d6fdba3c7a1c4307dc4eb
   languageName: node
   linkType: hard
 
-"@metamask/keyring-utils@workspace:^, @metamask/keyring-utils@workspace:packages/keyring-utils":
+"@metamask/keyring-utils@workspace:packages/keyring-utils":
   version: 0.0.0-use.local
   resolution: "@metamask/keyring-utils@workspace:packages/keyring-utils"
   dependencies:

@@ -45,9 +45,9 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@metamask/keyring-api": "workspace:^",
-    "@metamask/keyring-snap-client": "workspace:^",
-    "@metamask/keyring-utils": "workspace:^",
+    "@metamask/keyring-api": "../keyring-api",
+    "@metamask/keyring-snap-client": "../keyring-snap-client",
+    "@metamask/keyring-utils": "../keyring-utils",
     "@metamask/snaps-controllers": "^9.10.0",
     "@metamask/snaps-sdk": "^6.7.0",
     "@metamask/snaps-utils": "^8.3.0",
